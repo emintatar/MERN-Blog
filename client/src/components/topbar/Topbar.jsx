@@ -61,7 +61,7 @@ const Topbar = () => {
             </li>
           </ul>
         )}
-        <i class="topSearchIcon fas fa-search"></i>
+        <i className="topSearchIcon fas fa-search"></i>
       </div>
     </div>
   );

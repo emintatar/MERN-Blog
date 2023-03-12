@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const multer = require("multer");
+const cors = require("cors");
 const app = express();
 const port = 5000;
 const hostname = "127.0.0.1";
@@ -35,8 +36,8 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
   res.status(200).json("File has been uploaded");
 });
 
+app.use(cors());
 app.use(express.json());
-
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
