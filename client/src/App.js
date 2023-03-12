@@ -1,5 +1,6 @@
-import React from "react";
+import { useContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Context } from "./context/Context";
 import Topbar from "./components/topbar/Topbar";
 import Home from "./pages/home/Home";
 import Single from "./pages/single/Single";
@@ -9,7 +10,7 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 
 function App() {
-  const user = false;
+  const { user } = useContext(Context);
 
   return (
     <Router>
